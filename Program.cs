@@ -1,4 +1,4 @@
-﻿using RPGTest.Impacts;
+﻿using RPGTest.Impacts.BuffDefine;
 using static RPGTest.Impacts.Base.Buff;
 
 namespace RPGTest
@@ -12,7 +12,7 @@ namespace RPGTest
             shieldsBuff.BufferName = "test";
             shieldsBuff.DurationRound = 2;
             //shieldsBuff.BufferType = BuffType.Shields;
-            shieldsBuff.ShieldsNums = 200;
+            shieldsBuff.ShieldsValues = 200;
             Console.WriteLine(shieldsBuff.ToString());
         }
     }

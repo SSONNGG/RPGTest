@@ -21,6 +21,5 @@ namespace RPGTest.Role
         private List<Buff> lstBuffs { get; set; }
         //减益列表
         private List<DeBuff> lstDebuffs { get; set; }
-
     }
 }
