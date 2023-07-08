@@ -9,7 +9,7 @@ namespace RPGTest.Impacts.Base
     /// <summary>
     /// 增益属性
     /// </summary>
-    class Buff
+    public class Buff
     {
         public enum BUFF_TYPE
         {

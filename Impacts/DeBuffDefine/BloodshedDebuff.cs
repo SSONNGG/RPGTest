@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static RPGTest.Impacts.Base.Buff;
+using static RPGTest.Impacts.Base.DeBuff;
 
 namespace RPGTest.Impacts.DeBuffDefine
 {
@@ -18,7 +18,7 @@ namespace RPGTest.Impacts.DeBuffDefine
         //默认构造函数
         public BloodshedDebuff()
         {
-           BufferType = DEBUFF_TYPE.Bloodshed;
+            BufferType = DEBUFF_TYPE.Bloodshed;
         }
 
         public override string ToString()

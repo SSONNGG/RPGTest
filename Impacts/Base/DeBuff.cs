@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static RPGTest.Impacts.Base.Buff;
 
 namespace RPGTest.Impacts.Base
 {
     /// <summary>
     /// 减益属性
     /// </summary>
-    class DeBuff
+    public class DeBuff
     {
         public enum DEBUFF_TYPE
         {
@@ -20,11 +21,15 @@ namespace RPGTest.Impacts.Base
         }
 
         //Buff类型
-        public DEBUFF_TYPE BufferType { get; set; }
+        private DEBUFF_TYPE _bufferType;
         //Buff名称
-        public string BufferName { get; set; }
+        private string _bufferName;
         //持续回合
-        public int DurationRound { get; set; }
+        private int _durationRound;
+
+        public DEBUFF_TYPE BufferType { get => _bufferType; set => _bufferType = value; }
+        public string BufferName { get => _bufferName; set => _bufferName = value; }
+        public int DurationRound { get => _durationRound; set => _durationRound = value; }
 
 
         /// <summary>
@@ -34,7 +39,7 @@ namespace RPGTest.Impacts.Base
         /// <return>更新后的回合数</return>
         public int UpdateRound(int round)
         {
-            if (_durationRound > 0)
+            if (DurationRound > 0)
             {
                 //如果当前回合-更新的回合数小于0，直接返回0
                 if (_durationRound + round < 0)
