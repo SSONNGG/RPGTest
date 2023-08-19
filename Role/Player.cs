@@ -12,17 +12,18 @@ namespace RPGTest.Role
     public class Player
     {
         //名称
-        private string _name;
+        public string _name { set; get; }
         //血量值
-        private int _blood;
+        public int _blood { set; get; }
         //速度
-        private int _speed;
-
+        public int _speed { set; get; }
 
         //增益列表
         private List<Buff> lstBuffs;
         //减益列表
         private List<DeBuff> lstDebuffs;
+
+        
 
         //添加Buff
         public void AddBuff(Buff buff)

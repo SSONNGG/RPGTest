@@ -9,6 +9,13 @@ namespace RPGTest.Panel
 {
     interface IControllerPanel
     {
+        enum FightRes
+        { 
+            CONTINUE = 0,
+            PLAYER_WIN,
+            COMPUTER_WIN    
+        }
+
         /// <summary>
         /// 开始，加载数据
         /// </summary>
@@ -30,6 +37,6 @@ namespace RPGTest.Panel
         /// 结束，判断胜负
         /// </summary>
         /// <returns>玩家胜利返回true<br/>电脑胜利返回false</returns>
-        public bool onStop();
+        public FightRes onStop();
     }
 }
