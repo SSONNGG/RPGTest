@@ -31,12 +31,12 @@ namespace RPGTest.Panel
         /// <summary>
         /// 暂停，玩家决策
         /// </summary>
-        public void onPause();
+        public void onPause(Player player);
 
         /// <summary>
         /// 结束，判断胜负
         /// </summary>
         /// <returns>玩家胜利返回true<br/>电脑胜利返回false</returns>
-        public FightRes onStop();
+        public void onStop();
     }
 }

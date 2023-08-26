@@ -12,18 +12,39 @@ namespace RPGTest.Role
     public class Player
     {
         //名称
-        public string _name { set; get; }
+        private string _name;
+        public string Name { set; get; }
+
         //血量值
-        public int _blood { set; get; }
+        private int _blood;
+        public int Blood
+        {
+            set
+            {
+                if (_blood != value)
+                {
+                    _blood = value;
+                    OnBloodChanged(EventArgs.Empty);
+                }
+            }
+            get => _blood;
+        }
         //速度
-        public int _speed { set; get; }
+        private int _speed;
+        public int Speed{ set; get; }
 
         //增益列表
         private List<Buff> lstBuffs;
         //减益列表
         private List<DeBuff> lstDebuffs;
 
-        
+        //事件监听
+        public event EventHandler BloodChanged;
+
+        protected virtual void OnBloodChanged(EventArgs e)
+        {
+            BloodChanged?.Invoke(this, e);
+        }
 
         //添加Buff
         public void AddBuff(Buff buff)
